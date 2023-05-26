@@ -1,5 +1,6 @@
+
 <ul class="businesses">
-    <li *ngFor="let business of businesses">
+    <li *ngForOf ="let business of businesses">
         <button type="button">
         <span class="badge">{{business.templateId}}</span>
         <span class="name">{{business.businessName}}</span>
