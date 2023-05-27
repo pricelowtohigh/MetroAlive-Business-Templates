@@ -16,11 +16,11 @@ import { CommonModule } from '@angular/common';
 export class BusinessListComponent implements OnInit {
 
   business: Business | undefined;
-  businesses?: BusinessList | Array<Business>;
+  businesses?: BusinessList | any;
 
   constructor(
     private route: ActivatedRoute,
-    private businessService: BusinessService, //NEED TO CREATE businessService component, this will retrieve list of business based on :templateId param
+    private businessService: BusinessService, 
     private location: Location
   ) {}
 
