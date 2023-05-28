@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 
-/*need to figure out how to setup routing on a module (non-standalone component)
-*/
 export class AppComponent {
   title = 'MetroAlive Business Sites';
 }

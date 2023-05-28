@@ -4,8 +4,8 @@ import { BusinessesComponent } from './businesses/businesses.component';
 import { BusinessListComponent } from './business-list/business-list.component';
 
 const routes: Routes = [
-  { path: 'businesses', component: BusinessesComponent },
-  { path: 'businesses/:templateId', component: BusinessListComponent} // CREATE NEW COMPONENT FOR RENDERING SPECIFIC BUSINESSES
+  { path: 'businesses', component: BusinessesComponent },               // This route will eventually be something more like a 'dashboard' 
+  { path: 'businesses/:templateId', component: BusinessListComponent}   // Selecting a Template ID from the dropdown will navigate to this route, which will display the businesses that share that Template ID
 ];
 
 @NgModule({

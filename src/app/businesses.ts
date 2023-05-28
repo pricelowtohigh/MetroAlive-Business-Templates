@@ -1,6 +1,10 @@
 import { Business } from "./business";
 
-export const BUSINESSES: Business[] = [
+/*
+    Raw data for each current business. In the future this data would be dynamic.
+*/
+
+export const BUSINESSES: Business[] = [         
     {
         "templateId": 15,
         "businessKey": 9937,

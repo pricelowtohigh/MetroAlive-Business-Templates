@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Business } from '../business';
 import { BUSINESSES } from '../businesses';
-import { Template } from '../template';
-import { TEMPLATES } from '../templates';
 import { BusinessService } from '../business.service';
 import { CommonModule } from '@angular/common';
 
@@ -18,10 +16,10 @@ export class BusinessesComponent implements OnInit {
   constructor(private businessService: BusinessService) {}
 
   ngOnInit(): void {
-    this.getBusinesses() // from businessService
+    this.getBusinesses() 
   }
 
-  getBusinesses(): void {
+  getBusinesses(): void {                                               // calls 'getBusinesses' from businessService, retrieves full list of Businesses
     this.businessService.getBusinesses()
     .subscribe((businesses: any) => this.businesses = businesses)
   }

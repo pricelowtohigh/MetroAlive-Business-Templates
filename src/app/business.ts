@@ -1,4 +1,4 @@
-export interface Business {
+export interface Business {     // 'Business' typescript interface
     templateId: number,
     businessKey: number,
     businessName: string,
