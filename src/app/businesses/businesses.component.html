@@ -2,9 +2,7 @@
     TO-DO:
         - Dynamically generate list of unique templates
         - Use list of unique templates to populate dropdown menu
-            - need to figure out where/how to create this list
-            - javascript or typescript?
-        - Using routing, for each dropdown item, add an href tag that points to URL/:templateId
+        - Using routing, for each dropdown item, add an href tag that points to URL/:templateId (semi-completed)
         - Configure routing to display each business for a given :templateId using *ngIf
             - *ngFor="let business of businesses" *ngIf="business.templateID == :templateId"
 --> 
@@ -12,20 +10,17 @@
 
 <h2>Businesses</h2>
 
-
-
-<app-business-list></app-business-list>
-
-<!-- <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown button
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li *ngFor="let business of businesses">
-            <button type="button">
-                <a class="dropdown-item" href="{{business.templateId}}">{{business.businessName}}</a>
-            </button>
-        </li>
+<div class="dropdown">      <!--Will eventually create a more functional layout, displaying this dropdown at all times and adding a more proper navbar-->
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown link
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">     <!--This list will eventually be created dynamically, by sorting through the complete list of Businesses-->
+      <li><a class="dropdown-item" href="businesses/15">15</a></li>
+      <li><a class="dropdown-item" href="businesses/26">26</a></li>
+      <li><a class="dropdown-item" href="businesses/36">36</a></li>
+      <li><a class="dropdown-item" href="businesses/39">39</a></li>
+      <li><a class="dropdown-item" href="businesses/48">48</a></li>
     </ul>
-  </div>
--->
+</div>
+
+<app-business-list></app-business-list>  <!--business-list component, should render a list of businesses when a templateId is selected in the dropdown-->
