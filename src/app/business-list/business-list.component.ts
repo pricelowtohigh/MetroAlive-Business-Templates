@@ -15,9 +15,8 @@ import { CommonModule } from '@angular/common';
 })
 export class BusinessListComponent implements OnInit {
 
-  business: Business | undefined;                   // Assigning the 'Business' interface to a variable ???
-  businesses?: BusinessList | Array<Business>;      // Assigning the 'BusinessList' interface to a variable ??? I believe this allows the getBusinessList function to write store its output somewhere. This variable is then accessed in the HTML.
-                                                    // What I don't understand fully, is how getBusinessList knows to store its output here. Is it because the output matches the format described by the 'BusinessList' interface?
+  businesses: Business[] = [];      // initializing a Business[] type variable, for use in the HTML
+  
   constructor(
     private route: ActivatedRoute,
     private businessService: BusinessService,
@@ -26,11 +25,12 @@ export class BusinessListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBusinessList();
+    // this.route.subscribe  need to 'subscribe' to ActivatedRoute to re-render component when route params change
   }
 
   getBusinessList() : void {          // Calling this function generates a list of Businesses that share a template based on route parameters
     const templateId = Number(this.route.snapshot.paramMap.get('templateId'));      // pulling the templateId from the URL
-    this.businessService.getBusinessList(templateId)        // calling the function, passing in the templateId
+    this.businesses = this.businessService.getBusinessList(templateId)  // assigning the output of businessService as a Business[] interface
   }
 
   goBack() : void {

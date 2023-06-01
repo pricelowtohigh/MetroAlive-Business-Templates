@@ -21,7 +21,7 @@ export class BusinessesComponent implements OnInit {
 
   getBusinesses(): void {                                               // calls 'getBusinesses' from businessService, retrieves full list of Businesses
     this.businessService.getBusinesses()
-    .subscribe((businesses: any) => this.businesses = businesses)
+    .subscribe((businesses: Business[]) => this.businesses = businesses)
   }
 
 }
