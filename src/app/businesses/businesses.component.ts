@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Business } from '../business';
+
 import { BUSINESSES } from '../businesses';
+import { Business } from '../business';
 import { BusinessService } from '../business.service';
 import { CommonModule } from '@angular/common';
 
@@ -9,14 +10,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './businesses.component.html',
   styleUrls: ['./businesses.component.css']
 })
-export class BusinessesComponent implements OnInit {  
+export class BusinessesComponent implements OnInit {
 
   businesses: Business[] = [];
 
   constructor(private businessService: BusinessService) {}
 
   ngOnInit(): void {
-    this.getBusinesses() 
+    this.getBusinesses()
   }
 
   getBusinesses(): void {                                               // calls 'getBusinesses' from businessService, retrieves full list of Businesses
