@@ -2,7 +2,7 @@ import  { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
 import { Injectable } from '@angular/core';
-import { environment } from '../environments/environment'
+import { environment } from '../../environments/environment'
 
 export interface ISearchResultData {
   // this represents what is returned from the database.  it's structure is defined by the api

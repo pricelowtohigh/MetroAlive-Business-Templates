@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Template, TemplateService } from './template.service';
+import { Template, TemplateService } from './service/template.service';
 
 import { Observable } from 'rxjs';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',

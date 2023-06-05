@@ -1,11 +1,10 @@
 <h1>{{title}}</h1>
 <nav>
     <a routerLink="/">Home</a>
-    <a routerLink="/businesses">List of Businesses</a>
   </nav>
   <div class="dropdown">
     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown link
+      Select Template
     </a>
 
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -14,12 +13,6 @@
         must use the "|async" when referring to an Observable
       -->
       <ng-container *ngFor='let template of templates|async'>
-        <!-- <li><a class="dropdown-item" href="businesses/15">15</a></li>
-        <li><a class="dropdown-item" href="businesses/26">26</a></li>
-        <li><a class="dropdown-item" href="businesses/36">36</a></li>
-        <li><a class="dropdown-item" href="businesses/39">39</a></li>
-        <li><a class="dropdown-item" href="businesses/48">48</a></li> -->
-
         <!--
           CSF : 6/2/23
           changed href to routerLink.  href causes the page to reload each time.  routerLink does not.

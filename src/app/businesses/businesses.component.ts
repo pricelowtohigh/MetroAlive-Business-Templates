@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BUSINESSES } from '../businesses';
 import { Business } from '../business';
-import { BusinessService } from '../business.service';
-import { CommonModule } from '@angular/common';
+import { BusinessService } from '..//service/business.service';
 
 @Component({
   selector: 'app-businesses',
