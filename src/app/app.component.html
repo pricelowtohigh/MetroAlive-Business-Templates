@@ -1,19 +1,5 @@
 <h1>{{title}}</h1>
-<nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/businesses">List of Businesses</a>
-  </nav>
-  <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown link
-    </a>
-  
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <li><a class="dropdown-item" href="businesses/15">15</a></li>
-      <li><a class="dropdown-item" href="businesses/26">26</a></li>
-      <li><a class="dropdown-item" href="businesses/36">36</a></li>
-      <li><a class="dropdown-item" href="businesses/39">39</a></li>
-      <li><a class="dropdown-item" href="businesses/48">48</a></li>
-    </ul>
-</div>
+
+<app-dropdown></app-dropdown>
+<app-business-list></app-business-list>
 <router-outlet></router-outlet>

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Template, TemplateService } from './service/template.service';
+
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,7 @@ import { RouterModule } from '@angular/router';
 })
 
 export class AppComponent {
+
   title = 'MetroAlive Business Sites';
+
 }
