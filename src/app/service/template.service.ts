@@ -3,20 +3,8 @@ import { Observable, map } from 'rxjs';
 
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment'
-
-export interface ISearchResultData {
-  // this represents what is returned from the database.  it's structure is defined by the api
-  returncode: number
-  returnmsg: string
-  data: Template[]
-}
-
-export interface Template {
-  // this represents a template record from the TLTemplate table.  it's structure is defined by the database stored procedure
-  templateid: number
-  templatename: string
-  templatedescription: number
-}
+import { Template } from '../lib/template';
+import { SimpleGetResult } from '../lib/simpleGetResult';
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +26,7 @@ export class TemplateService {
 
     return this.httpClient
       // makes call to api
-      .post<ISearchResultData>(
+      .post<SimpleGetResult>(
         environment.metroaliveURL,
         {
           method: 'simpleget',

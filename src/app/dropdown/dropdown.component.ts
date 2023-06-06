@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Template, TemplateService } from '../service/template.service';
+import { TemplateService } from '../service/template.service';
 
 import { Observable } from 'rxjs';
+import { Template } from '../lib/template';
 
 
 @Component({
