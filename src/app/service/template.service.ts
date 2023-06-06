@@ -2,9 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment'
 import { Template } from '../lib/template';
-import { SimpleGetResult } from '../lib/simpleGetResult';
 
 @Injectable({
     providedIn: 'root'
@@ -26,17 +24,12 @@ export class TemplateService {
 
         return this.httpClient
             // makes call to api
-            .post<SimpleGetResult>(
-                environment.dataManURL,
-                {
-                    method: 'simpleget',
-                    command: 'Template_GetTemplateList',
-                    parameters: {},
-                },
+            .get<Template[]>(
+                'https://matthewsfalberg.com/api/rest/pagetemplate',
                 httpOptions
             )
             .pipe(map((results) => {
-                return results.data
+                return results
             }))
     }
 }
