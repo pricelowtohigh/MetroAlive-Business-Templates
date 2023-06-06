@@ -29,5 +29,4 @@ export class DropdownComponent {
     // via the template service.  the template service returns an Observable.
     this.templates = this.templateService.get()
   }
-
 }

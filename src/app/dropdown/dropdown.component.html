@@ -1,4 +1,4 @@
-<div class="dropdown">
+<!-- <div class="dropdown">
     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
       Select Template
     </a>
@@ -9,12 +9,10 @@
       </ng-container>
     </ul>
 </div>
-<br>
-<mat-form-field>
-  <mat-label>Choose a template</mat-label>
-  <mat-select>
-    <ng-container *ngFor='let template of templates|async'>
-      <mat-option [value]=[template.templateid]>{{template.templatename}}</mat-option>
-    </ng-container>
-  </mat-select>
-</mat-form-field>
+<br> -->
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <ng-container *ngFor='let template of templates|async'>
+    <a mat-menu-item [routerLink]="'businesses/' + template.templateid">{{template.templatename}}</a>
+  </ng-container>
+</mat-menu>
