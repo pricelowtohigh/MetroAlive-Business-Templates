@@ -5,6 +5,9 @@ import { BusinessListComponent } from './business-list/business-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
