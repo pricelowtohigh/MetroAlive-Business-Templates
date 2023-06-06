@@ -15,7 +15,6 @@ export class TemplateService {
     ) { }
 
     public get(): Observable<Template[]> {
-
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'text/plain',

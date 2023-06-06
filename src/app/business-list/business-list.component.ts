@@ -32,6 +32,10 @@ export class BusinessListComponent implements OnInit {
       this.businessService.get(templateId).subscribe((businesses: Business[]) => {
         this.businesses = businesses
       })
+
+      this.businessService.gettest(templateId).subscribe((businesses: Business[]) => {
+        console.log(businesses)
+      })
   }
 
   goBack(): void {
