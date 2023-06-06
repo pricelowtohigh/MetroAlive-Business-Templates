@@ -1,4 +1,4 @@
-import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
+import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 import { Business } from '../business';

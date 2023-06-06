@@ -1,7 +1,7 @@
 import { Business } from "./business";
 
 /*
-    Raw data for each current business. In the future this data would be dynamic.
+    Raw data for each current business. In the future this data would be pulled from a database.
 */
 
 export const BUSINESSES: Business[] = [         
