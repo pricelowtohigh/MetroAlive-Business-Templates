@@ -1,23 +1,18 @@
-<div class="dropdown">
+<!-- <div class="dropdown">
     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
       Select Template
     </a>
 
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <!--
-        CSF : 6/2/23
-        must use the "|async" when referring to an Observable
-      -->
       <ng-container *ngFor='let template of templates|async'>
-        <!--
-          CSF : 6/2/23
-          changed href to routerLink.  href causes the page to reload each time.  routerLink does not.
-
-          -Href is the basic attribute provided by Html to navigate through pages which reloads the page on click.
-          -routerLink is the attribute provided by angular to navigate to different components without reloading the page.
-          -Major difference between both is that href kills the state of the current page where routerLink doesnt lose the state of the page.
-        -->
         <li><a class="dropdown-item" [routerLink]="'businesses/' + template.templateid">{{template.templatename}}</a></li>
       </ng-container>
     </ul>
 </div>
+<br> -->
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <ng-container *ngFor='let template of templates|async'>
+    <a mat-menu-item [routerLink]="'businesses/' + template.templateid">{{template.templatename}}</a>
+  </ng-container>
+</mat-menu>

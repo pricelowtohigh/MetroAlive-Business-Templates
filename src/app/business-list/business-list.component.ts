@@ -30,7 +30,6 @@ export class BusinessListComponent implements OnInit {
   getBusinessList(templateId: number): void {          // Calling this function generates a list of Businesses that share a template based on route parameters
       // this.businesses = this.businessService.getBusinessList(templateId)  // assigning the output of businessService as a Business[] interface
       this.businessService.get(templateId).subscribe((businesses: Business[]) => {
-        console.log(businesses)
         this.businesses = businesses
       })
   }
