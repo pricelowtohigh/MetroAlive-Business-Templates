@@ -4,9 +4,8 @@
 <ul class="businesses">
     <li *ngFor ="let business of businesses">
         <button type="button">
-        <span class="badge">{{business.templateId}}</span>
-        <!-- <span class="name">{{business.businessName}}</span> -->
-        <a href="{{metroAliveURL + '/' + business.URL}}" target="_blank">{{business.businessName}}</a>
+        <span class="badge">{{business.templateid}}</span>
+        <a href="{{metroAliveURL + '/' + business.url}}" target="_blank">{{business.businessname}}</a>
         </button>
     </li>
 </ul>

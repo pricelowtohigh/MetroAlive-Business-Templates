@@ -1,6 +1,6 @@
 export interface Business {     // 'Business' typescript interface
-    templateId: number,
-    businessKey: number,
-    businessName: string,
-    URL: string
+    templateid: number,
+    businesskey: number,
+    businessname: string,
+    url: string
 }
