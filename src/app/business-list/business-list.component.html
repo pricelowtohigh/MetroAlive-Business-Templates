@@ -1,11 +1,18 @@
 <!--
     This component is responsible for displaying a list of businesses.
 -->
-<ul class="businesses">
-    <li *ngFor ="let business of businesses">
-        <button type="button">
-        <span class="badge">{{business.templateid}}</span>
-        <a href="{{metroAliveURL + '/' + business.url}}" target="_blank">{{business.businessname}}</a>
-        </button>
-    </li>
-</ul>
+
+<mat-nav-list>
+
+    <mat-card *ngFor="let business of businesses">
+        <mat-card-header>
+          <mat-card-title>{{ business.businessname }}</mat-card-title>
+          <mat-card-subtitle>Template {{ business.templateid }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <a mat-button href="{{metroAliveURL + '/' + business.url}}">Website Link</a>
+        </mat-card-actions>
+    </mat-card>
+
+    <a mat-list-item href="{{metroAliveURL + '/' + business.url}}" *ngFor="let business of businesses">{{ business.businessname }}</a>
+</mat-nav-list>
