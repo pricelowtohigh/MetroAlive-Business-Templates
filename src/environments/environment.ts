@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
-  dataManURL: 'https://matthewsfalberg.com/include2020/serverscripts/debug/dataman.ashx',
-  metroAliveURL: 'https://qa.metroalive.com'
-}
+  metroAliveURL: 'https://qa.metroalive.com',
+  logoImageURL: 'https://www.metroalive.com/images/logos/',
+  imageFileURL: 'https://www.metroalive.com/images/790x387/',
+};
