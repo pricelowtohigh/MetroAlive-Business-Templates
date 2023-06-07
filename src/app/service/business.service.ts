@@ -31,8 +31,8 @@ export class BusinessService {
         'https://matthewsfalberg.com/api/rest/business',
         httpOptions
       )
-      .pipe(map((results) => {
-        return results
-      }))
+      // .pipe(map((results) => {
+      //   return results
+      // }))
   }
 }

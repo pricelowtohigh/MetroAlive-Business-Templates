@@ -24,7 +24,9 @@ export class BusinessListComponent implements OnInit {
   metroAliveURL = environment.metroAliveURL
 
   ngOnInit(): void {
-      this.activatedRoute.url.subscribe((url: UrlSegment[]) => this.getBusinessList(Number(url[1]?.path))) // watch for changes to the URL
+    this.activatedRoute.url.subscribe((url: UrlSegment[]) => {
+      this.getBusinessList(Number(url[1]?.path))
+    }) // watch for changes to the URL
   }
 
   getBusinessList(templateId: number): void {          // Calling this function generates a list of Businesses that share a template based on route parameters

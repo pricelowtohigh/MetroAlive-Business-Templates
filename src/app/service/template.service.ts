@@ -27,8 +27,8 @@ export class TemplateService {
                 'https://matthewsfalberg.com/api/rest/pagetemplate',
                 httpOptions
             )
-            .pipe(map((results) => {
-                return results
-            }))
+            // .pipe(map((results) => {
+            //     return results
+            // }))
     }
 }
