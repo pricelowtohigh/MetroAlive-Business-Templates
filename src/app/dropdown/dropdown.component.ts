@@ -18,6 +18,8 @@ export class DropdownComponent {
     private templateService: TemplateService
   ) { }
 
+  showFiller = false;
+
     ngOnInit(): void {
       this.templates = this.templateService.get() // get list of templates from the database
   }

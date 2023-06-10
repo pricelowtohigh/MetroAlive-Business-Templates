@@ -2,24 +2,21 @@
     This component is responsible for displaying a list of businesses.
 -->
 
+
 <mat-nav-list>
   <mat-card *ngFor="let business of businesses">
+    
     <mat-card-header>
+    <mat-card-title-group>
       <mat-card-title>{{ business.businessname }}</mat-card-title>
       <mat-card-subtitle>Template {{ business.templateid }}</mat-card-subtitle>
+      <img [src]="imageFileURL + business.imagefilename" width="200"/>
+    </mat-card-title-group>
     </mat-card-header>
     <mat-card-actions>
       <a mat-button href="{{ metroAliveURL + '/' + business.url }}"
         >Website Link</a
       >
-      <img [src]="imageFileURL + business.imagefilename" width="80" />
     </mat-card-actions>
   </mat-card>
-
-  <a
-    mat-list-item
-    href="{{ metroAliveURL + '/' + business.url }}"
-    *ngFor="let business of businesses"
-    >{{ business.businessname }}</a
-  >
 </mat-nav-list>
