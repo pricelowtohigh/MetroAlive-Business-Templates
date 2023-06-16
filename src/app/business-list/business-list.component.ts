@@ -1,6 +1,5 @@
 import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-
 import { Business } from '../lib/business';
 import { BusinessService } from '../service/business.service';
 import { Location } from '@angular/common';

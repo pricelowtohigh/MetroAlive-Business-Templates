@@ -16,6 +16,7 @@ import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
+import { LoginButtonComponent } from './shared/components/buttons/login-button.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,11 @@ import { environment as env } from '../environments/environment';
     MatButtonModule,
     MatListModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    LoginButtonComponent,
+    AuthModule.forRoot({
+      ...env.auth0,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

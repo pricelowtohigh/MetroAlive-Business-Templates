@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { TemplateService } from '../service/template.service';
-
 import { Observable } from 'rxjs';
 import { Template } from '../lib/template';
 
