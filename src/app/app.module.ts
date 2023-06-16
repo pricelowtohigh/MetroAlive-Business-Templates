@@ -14,6 +14,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
 
 @NgModule({
   declarations: [
