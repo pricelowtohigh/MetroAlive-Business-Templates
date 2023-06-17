@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginButtonComponent } from './login-button.component';
+import { LoginButtonComponent } from './shared/components/buttons/login-button.component';
 
 @Component({
   selector: 'app-root',

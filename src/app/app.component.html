@@ -1,7 +1,7 @@
-<mat-toolbar color="primary">
-  <app-dropdown></app-dropdown>
-  <span>{{title}}</span>
-  <app-login-button></app-login-button>
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+  <app-dropdown flex="20"></app-dropdown>
+  <span flex="70">{{title}}</span> 
+  <app-login-button flex=""></app-login-button>
 </mat-toolbar>
 
 <app-business-list></app-business-list>
